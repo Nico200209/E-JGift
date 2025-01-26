@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7600589193983914898}
   - component: {fileID: 1119142582305225578}
   - component: {fileID: 8911007919485958009}
+  - component: {fileID: 7743875959922397387}
   m_Layer: 0
   m_Name: GoldCoins
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3217612706989983831}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.017469307, y: 0.014255274, z: -0.1131496}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 215, y: 215, z: 215}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,3 +109,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.058852464, y: 0.048485197, z: 0.06506889}
   m_Center: {x: 0.0032892227, y: 0.024630018, z: 0.001496695}
+--- !u!114 &7743875959922397387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3217612706989983831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9fdb8f018434fdfa5a1c6ecdbb6e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  speed: 250
+  points: 3

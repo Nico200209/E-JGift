@@ -3,39 +3,41 @@ using UnityEngine;
 
 public class CoinSpawnerScript : MonoBehaviour
 {
-    public GameObject coinPrefab;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject goldCoinPrefab;
+    public GameObject silverCoinPrefab;
+    public GameObject copperCoinPrefab;
+
+    private float[] boatPositions = { -32.08145f, -2.08106f, 27.91358f }; // Possible boat x positions
+
     void Start()
     {
-        StartCoroutine(SpawnCoinCourutine());
+        StartCoroutine(SpawnCoinCoroutine());
     }
 
-    IEnumerator SpawnCoinCourutine()
+    IEnumerator SpawnCoinCoroutine()
     {
         while (true)
         {
             float randomNumber = Random.Range(0, 3);
-            if (randomNumber == 0)
-                StartCoroutine(SpawnCoin(-30f));
-            if (randomNumber == 1)
-                StartCoroutine(SpawnCoin(0f));
-            if (randomNumber == 2)
-                StartCoroutine(SpawnCoin(30f));
+            GameObject coinToSpawn = null;
 
+            // Randomly pick which coin to spawn
+            if (randomNumber == 0)
+                coinToSpawn = goldCoinPrefab;
+            else if (randomNumber == 1)
+                coinToSpawn = silverCoinPrefab;
+            else if (randomNumber == 2)
+                coinToSpawn = copperCoinPrefab;
+
+            // Randomly select a position from the predefined boat positions
+            float xValue = boatPositions[Random.Range(0, boatPositions.Length)];
+
+            // Spawn the selected coin
+            Instantiate(coinToSpawn, new Vector3(xValue, -0.13f, 361.6f), Quaternion.identity);
+
+            // Wait for a random time before spawning the next coin
             float delay = Random.Range(1f, 4f);
             yield return new WaitForSeconds(delay);
         }
-    }
-
-    IEnumerator SpawnCoin(float xValue)
-    {
-        yield return new WaitForSeconds(3f);
-        Instantiate(coinPrefab, new Vector3(xValue, -0.13f, 361.6f), Quaternion.identity);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
