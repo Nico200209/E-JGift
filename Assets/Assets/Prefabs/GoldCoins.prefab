@@ -121,6 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae9fdb8f018434fdfa5a1c6ecdbb6e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
   speed: 250
   points: 3
+  pickupSound: {fileID: 8300000, guid: b0ba0052d08794c46bafb4ab9b6adf10, type: 3}
