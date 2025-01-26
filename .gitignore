@@ -1,7 +1,4 @@
-# This .gitignore file should be placed at the root of your Unity project directory
-#
-# Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
-#
+# Unity project ignore rules
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -61,3 +58,17 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS Finder tags
+*.DS_Store
+*/.Spotlight-V100
+*/.Trashes
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
